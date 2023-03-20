@@ -10,6 +10,18 @@ square.addEventListener('click', (event) => changeColour('green'))
 square.addEventListener('mouseover', (event) => changeColour('grey'))
 square.addEventListener('mouseover', (event) => changeColour('red'))
 
+var theidwords = document.getElementById('words')
+
+function greeting() {
+    words.innerHTML = 'Welcome to Flatland <br> I am Square!'
+}
+function clicked(){
+    var msg = 'Build a<br>' +createBuzzwordPhrase();
+    words.innerHTML = msg;
+}
+
+words.addEventListener('click', (event) => clicked());
+
 function createBuzzwordPhrase() {
     /* See https://en.wikipedia.org/wiki/List_of_buzzwords */
     let buzz = ["Paradigm-changing", "Multi-tier", "10,000-foot", "Agile", "Customer", "Win-win"];
@@ -23,18 +35,6 @@ function createBuzzwordPhrase() {
     return  buzz[idx_buz] + " " + action[idx_act] + " " + outcome[idx_out];
 }
 
-
-var theidwords = document.getElementById('words')
-
-function greeting() {
-    words.innerHTML = 'Welcome to Flatland <br> I am Square!'
-}
-function clicked(){
-    var msg = 'Build a<br>' +createBuzzwordPhrase();
-    words.innerHTML = msg;
-}
-
-words.addEventListener('click', (event) => clicked());
 
 document.onload = greeting() 
 console.log(createBuzzwordPhrase())
