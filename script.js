@@ -29,5 +29,12 @@ var theidwords = document.getElementById('words')
 function greeting() {
     words.innerHTML = 'Welcome to Flatland <br> I am Square!'
 }
+function clicked(){
+    var msg = 'Build a<br>' +createBuzzwordPhrase();
+    words.innerHTML = msg;
+}
+
+words.addEventListener('click', (event) => clicked());
+
 document.onload = greeting() 
 console.log(createBuzzwordPhrase())
