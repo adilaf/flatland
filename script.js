@@ -23,4 +23,11 @@ function createBuzzwordPhrase() {
     return  buzz[idx_buz] + " " + action[idx_act] + " " + outcome[idx_out];
 }
 
+
+var theidwords = document.getElementById('words')
+
+function greeting() {
+    words.innerHTML = 'Welcome to Flatland <br> I am Square!'
+}
+document.onload = greeting() 
 console.log(createBuzzwordPhrase())
