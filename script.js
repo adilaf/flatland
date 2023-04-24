@@ -15,7 +15,7 @@ square.addEventListener('click', (event) => clicked());
 
 /* create hover effect*/
 square.addEventListener('mouseover', (event) => changeColour('grey'));
-square.addEventListener('mouseover', (event) => changeColour('red'));
+square.addEventListener('mouseout', (event) => changeColour('red'));
 
 var words = document.getElementById('words')
 
